@@ -1,8 +1,12 @@
-import soma from './func'
+import {soma, multiplica} from './func'
 
-describe('Teste da funcao', () => {
+describe('Teste das funcoes', () => {
     test('1 +  2 = 3', () => {
-        expect(1 + 2).toBe(3)
+        expect(soma(1, 2)).toBe(3)
+    })
+
+    test('5 * 4 * 2 =40', () => {
+        expect(multiplica(5, 4, 2)).toBe(40)
     })
 
 })
