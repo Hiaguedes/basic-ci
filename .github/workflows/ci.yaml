@@ -1,6 +1,6 @@
 name: CI-status-check
 on: 
-  push:
+  pull_request:
     branches: [ main ]
 jobs:
   status-check:
