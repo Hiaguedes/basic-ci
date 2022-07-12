@@ -1,4 +1,4 @@
-import {soma, multiplica} from './func'
+import {soma, multiplica, contaLetras} from './func'
 
 describe('Teste das funcoes', () => {
     test('1 +  2 = 3', () => {
@@ -7,6 +7,10 @@ describe('Teste das funcoes', () => {
 
     test('5 * 4 * 2 =40', () => {
         expect(multiplica(5, 4, 2)).toBe(40)
+    })
+
+    test('Brasil campeão tem treze letras!', () => {
+        expect(contaLetras('Brasil campeão')).toBe(13)
     })
 
 })
