@@ -19,8 +19,6 @@ jobs:
 
       - name: run tests
         run: npm test
-
-        jobs:
   sonarcloud:
     name: SonarCloud
     runs-on: ubuntu-latest
