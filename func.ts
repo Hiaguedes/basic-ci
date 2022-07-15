@@ -1,5 +1,18 @@
 const soma = (...args: number[]) => {
-    return args.reduce((acc, current) => acc + current)
+
+    let maxDecimals = 0;
+
+    args.forEach(arg => {
+        if(!/\./g.test(arg.toString())){
+            return;
+        }
+        const numberOfDecimals = arg.toString().split(".")[1].length;
+        if(numberOfDecimals > maxDecimals){
+            maxDecimals = numberOfDecimals;
+        }
+    })
+
+    return Number(args.reduce((acc, current) => acc + current).toFixed(maxDecimals))
 }
 
 const multiplica = (...args: number[]) => {
@@ -11,8 +24,5 @@ const contaLetras = (text: string) => {
 
     return separaLetras.length;
 }
-
-console.log(soma(1,2,3))
-console.log(multiplica(5,4,2))
 
 export {soma, multiplica, contaLetras}
