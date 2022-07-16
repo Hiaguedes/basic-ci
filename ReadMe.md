@@ -11,6 +11,6 @@ npx ts-node <caminho do arquivo em relacao a raiz>
 Pra rodar o projeto no docker, tenha o docker instalado ne e rode os comandos
 
 ```
- docker build -t hiaguedes/basic-cs .
- docker run -it hiaguedes/basic-cs
+ docker build -t hiaguedes/basic-ci .
+ docker run -it hiaguedes/basic-ci
 ```
